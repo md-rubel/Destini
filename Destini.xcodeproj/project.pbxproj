@@ -12,6 +12,8 @@
 		254AC64D22CDE4CC005B40B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254AC64B22CDE4CC005B40B8 /* Main.storyboard */; };
 		254AC64F22CDE4CD005B40B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 254AC64E22CDE4CD005B40B8 /* Assets.xcassets */; };
 		254AC65222CDE4CD005B40B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254AC65022CDE4CD005B40B8 /* LaunchScreen.storyboard */; };
+		254AC65A22CDE670005B40B8 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AC65922CDE670005B40B8 /* ButtonStyle.swift */; };
+		254AC65C22CDFD73005B40B8 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AC65B22CDFD73005B40B8 /* Story.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		254AC64E22CDE4CD005B40B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		254AC65122CDE4CD005B40B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		254AC65322CDE4CD005B40B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		254AC65922CDE670005B40B8 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		254AC65B22CDFD73005B40B8 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		254AC64622CDE4CC005B40B8 /* Destini */ = {
 			isa = PBXGroup;
 			children = (
-				254AC64722CDE4CC005B40B8 /* AppDelegate.swift */,
-				254AC64922CDE4CC005B40B8 /* ViewController.swift */,
-				254AC64B22CDE4CC005B40B8 /* Main.storyboard */,
+				254AC66122CE010A005B40B8 /* Controller */,
+				254AC66022CE00DB005B40B8 /* View */,
+				254AC65F22CE00D0005B40B8 /* Model */,
 				254AC64E22CDE4CD005B40B8 /* Assets.xcassets */,
 				254AC65022CDE4CD005B40B8 /* LaunchScreen.storyboard */,
 				254AC65322CDE4CD005B40B8 /* Info.plist */,
 			);
 			path = Destini;
+			sourceTree = "<group>";
+		};
+		254AC65F22CE00D0005B40B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				254AC65B22CDFD73005B40B8 /* Story.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		254AC66022CE00DB005B40B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				254AC65922CDE670005B40B8 /* ButtonStyle.swift */,
+				254AC64B22CDE4CC005B40B8 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		254AC66122CE010A005B40B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				254AC64722CDE4CC005B40B8 /* AppDelegate.swift */,
+				254AC64922CDE4CC005B40B8 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254AC65A22CDE670005B40B8 /* ButtonStyle.swift in Sources */,
 				254AC64A22CDE4CC005B40B8 /* ViewController.swift in Sources */,
 				254AC64822CDE4CC005B40B8 /* AppDelegate.swift in Sources */,
+				254AC65C22CDFD73005B40B8 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ME927QUXF;
 				INFOPLIST_FILE = Destini/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.mdrubel.Destini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ME927QUXF;
 				INFOPLIST_FILE = Destini/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.mdrubel.Destini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
